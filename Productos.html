@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComercializadoraJYD</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><img src="img/logo.png" alt="Logo JYD"></div>
+    <input type="checkbox" id="toggle">
+    <label for="toggle"><img src="img/icons8-menú-xbox-64.png" alt="menu"></label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Productos.html">Productos</a>
+                  <ul>
+                    <li><a href="Productos.html">Asadores de pollo</a>
+                    </li>
+                    <li><a href="Productos.html">Sistema de extracción</a>
+                    </li>
+                    <li><a href="Productos.html">Cocción</a>
+                    </li>
+                    <li><a href="Productos.html">Moviliario</a>
+                    </li>
+                    <li><a href="Productos.html">Linea Hospitalaria</a></li>
+                    <li><a href="Productos.html">Montajes</a></li>
+                  </ul>
+                </li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Contacto.html" class="btn"><button>Contact</button></a></li>
+            </ul>
+        </nav>         
+</header>
+
+<div class="icono-fijo">
+  <a href="hhttps://web.whatsapp.com/" target="_blank">
+    <img src="img/icons-whatsapp.png" alt="Descripción del icono">
+  </a>
+</div>
+
+    <section style="margin-top: 100px;">
+      <div class="section-tag"> 
+          <h2 class="titulos"> <img src="img/iconos/lateral-1.png" alt=""> NUESTROS PRODUCTOS <img src="img/iconos/lateral-2.png" alt=""> </h2>  
+      </div>
+
+      <div id="contenedor">
+        <div id="categorias">
+          <div class="categoria" onclick="mostrarProductos('categoria1', 5)">Categoría 1</div>
+          <div class="productos-lista" id="productos-categoria1"></div>
+          <div class="categoria" onclick="mostrarProductos('categoria2', 3)">Categoría 2</div>
+          <div class="productos-lista" id="productos-categoria2"></div>
+          <div class="categoria" onclick="mostrarProductos('categoria3', 2)">Categoría 3</div>
+          <div class="productos-lista" id="productos-categoria3"></div>
+          <div class="categoria" onclick="mostrarProductos('categoria4', 1)">Categoría 4</div>
+          <div class="productos-lista" id="productos-categoria4"></div>
+          <div class="categoria" onclick="mostrarImagenes('categoria5')">Categoría 5</div>
+          <div class="categoria" onclick="mostrarImagenes('categoria6')">Categoría 6</div>
+        </div>
+        <div id="imagenes"></div>
+      </div>
+    
+
+      <section>
+          <h4 class="text-center color-azul weight">CATEGORIAS</h4>
+          <div class="row container col-md-12">
+              <div class="box col-md-4">
+                  <ul class="list">
+                      <li class="expand color-azul weight f-z-22 ">Asadores de pollo.
+                          <ul>
+                              <li class="productos" page="asadores">Asadores</li>
+                          </ul>
+                      </li>
+                      <li class="expand color-azul weight f-z-22 ">Cocción.
+                          <ul>
+                              <li class="productos" page="freidora">Freidora</li>
+                              <li class="productos" page="parrillas">Parrillas</li>
+                          </ul>
+                      </li>
+                      <li class="expand color-azul weight f-z-22 ">Sistema de extracción.
+                          <ul>
+                              <li class="productos" page="extraccion">Sistema de extracción</li>
+                          </ul>
+                      </li>
+                      <li class="expand color-azul weight f-z-22 ">Linea Hospitalaria.
+                          <ul>
+                              <li class="productos" page="lineahospitalaria">Linea Hospitalaria</li>
+                          </ul>
+                      </li>
+                      <li class="expand color-azul weight f-z-22 ">Mobiliario.
+                          <ul>
+                              <li class="productos" page="mesones">Mesones y Lavaplatos</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-md-7" id="paginas-productos" style="margin: 3%;">
+
+              </div>
+          </div>
+      </section>
+  </section>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <ul>
+              <li>+57 3202556360</li>
+              <li>6017257912</li>
+              <li>ventas@comercialiadorajyd.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <ul>
+              <li>Politica de garantia</li>
+              <li>Politica de calidad</li>
+              <li>Terminos y condiciones</li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <ul>
+              <li><img src="/Nueva/img/Ubicacion-Pie-de-pagina.png" width="40" alt="">Ubicacion</li>
+              <li>Calle 37 Sur #72Q-60</li>
+              <li>
+                Redes sociales
+                <div class="row">
+                  <div class="icono-redes">
+                    <a href="#" target="_blank"><i class="redes"><img src="img/Facebook-(pie-de-pagina).png" alt="" width="50px"></i></a>
+                    <a href="https://www.youtube.com/channel/UCP5LOQH4OmXe4HJOMV6A3KQ" target="_blank"><i class="redes"><img src="img/Youtube-(pie-de-pagina).png" alt="" width="50px" ></i></a>
+                    <a href="https://www.instagram.com/equiposgastronomicosjyd/" target="_blank"><i class="redes"><img src="img/Instagram-(pie-de-pagina).png" alt=""width="50px" ></i></a>
+                </div>  
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+  <div class="copyright">
+      &copy;copyright Equipos Gastronómicos J & D
+  </div>
+
+      <script src="/js/prod.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Placed at the end of the document so the pages load faster --> 
+        <script src="js/jquery.min.js" ></script> 
+        <script src="js/bootstrap.min.js"></script> 
+        <script src="js/scrollPosStyler.js"></script> 
+        <script src="js/swiper.min.js"></script> 
+        <script src="js/isotope.min.js"></script> 
+        <script src="js/nivo-lightbox.min.js"></script> 
+        <script src="js/wow.min.js"></script> 
+        <script src="js/core.js"></script> 
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

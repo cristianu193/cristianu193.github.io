@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 85px;
+}
+
+.header{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;    
+    background-color: white;
+    padding: 8px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 5px solid rgb(55, 88, 149);
+}
+
+.header .logo img{
+    height: 80px;
+    line-height: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links ul {
+    list-style: none;
+}
+
+.header .nav-links ul li{
+    float: left;
+    position: relative;
+    line-height: 2.8;
+}
+
+.header .nav-links ul li a{
+    font-size: 18px;
+    color: rgb(55, 88, 149);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: all .2s ease;
+}
+.header .nav-links ul li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgba(55, 88, 149, 0.7);
+    border-radius: 10px;
+}
+
+.header .nav-links ul li ul {
+    position: absolute;
+    width: 250px;
+    background-color: white;
+    display: none;
+    border-radius: 20px ;
+}
+
+.header .nav-links ul li ul li a{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: rgb(55, 88, 149);
+}
+
+.header .nav-links ul li ul li ul { 
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+ 
+.header .nav-links ul li ul li {
+    width: 100%;
+}
+
+.header .nav-links ul li:hover > ul{
+    display: initial;
+}
+
+.header .btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: #003797;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    width: 45px;
+    height: 35px;
+}
+
+.nosotros {
+    margin-top: 22px;
+    background-color: rgb(55, 88, 149);
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;    
+}
+.nosotros div{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.nosotros h3{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+
+.titulos{
+    background-color: rgb(45, 88, 169);
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+}
+
+.blog-image-block{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 9px;
+    transition: all 0.3s;
+}
+
+.blog-image-block:hover{
+    transform: scale(1.08);
+}
+
+.timage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+}
+
+.footer{
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 190px;
+    padding: 5px 10%;
+    margin-top: 50px;
+}
+.footer li {
+    color: white;
+    list-style: none;
+}
+
+
+.copyright{
+    color: white;
+    background-color: #000000;
+    text-align: center;
+    padding: 5px 10%;
+    margin-top: 2px;
+}
+
+.icono-redes {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.icono-redes .redes{
+    cursor: pointer;
+}
+
+.icono-redes .redes img{
+    height: 50px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.icono-redes .redes img:hover{
+    transform: scale(1.2);
+}
+
+/*carrusel propio*/
+.carousell-container{
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+    border: 1px solid #070707;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousell {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Para suavizar el desplazamiento en dispositivos iOS */
+  }
+
+  .carousell-item {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%; /* Ajustar al ancho de cada elemento del carrusel */
+    min-width: 200px; /* Ancho mínimo de cada elemento */
+    margin-right: 40px; /* Espacio entre elementos */
+    display: flex; /* Agregamos esta propiedad */
+    justify-content: center; /* Centramos horizontalmente las imágenes */
+  }
+
+  .carousell-item img {
+    max-width: 100%; /* Ajustar la imagen al ancho del contenedor */
+    max-height: 100%; /* Ajustar la imagen a la altura máxima */
+    height: auto;
+    margin: auto; /* Centramos verticalmente la imagen */
+    display: block;
+  }
+/*Fin carrusel propio*/
+
+
+.img-fluid{
+    border-radius: 50%;
+}
+.blog-image-block{
+    text-align: center;
+    text-decoration: none;
+}
+.titulos{
+    width: 500px; /* Puedes ajustar el ancho según tus necesidades */
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+h4{
+    position: static;
+    justify-content: center;
+}
+
+.icono-fijo {
+    position: fixed;
+    right: 20px; /* Ajusta la posición desde el lado izquierdo */
+    top: 75%; /* Centra verticalmente */
+    transform: translateY(25%);
+    z-index: 999; /* Ajusta la capa z para asegurarse de que esté encima de otros elementos */
+  }
+
+
+/* Desde aqui empieza el css de productos */
+#contenedor {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+
+  #categorias {
+    position: relative;
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .categoria {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(55, 88, 149);
+    color: white;
+    text-align: left;
+    position: relative;
+  }
+
+  .productos-lista {
+    display: none;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .producto {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(55, 88, 149);
+    color: white;
+    text-align: left;
+    display: block;
+    width: 150px;
+  }
+
+  .producto:hover {
+    background-color: rgb(55, 88, 100);
+  }
+
+  #imagenes {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+  }
+/* fin de contenido para los productos*/
+
+
+@media (max-width:950px){
+
+    .container {
+        width: 100%;
+    }
+
+    .header label{
+        display: initial;
+    }
+
+    .header{
+        padding:  20px 10%;
+    }
+
+    .header .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(88, 123, 185, 0.7);
+        display: none;
+    }
+
+    .header .nav-links ul li {
+        width: 100%;
+    }
+
+    .header .nav-links ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+
+    .header .nav-links ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header .nav-links ul li ul li {
+        background-color: rgba(88, 123, 185, 0.7);
+    }
+
+    .header .nav-links ul li ul li ul {
+        position: relative;
+        width: 80%;
+        left: 0;
+    }
+    .footer{
+        height: 400px;
+    }
+
+    #toggle:checked ~ .nav-links{
+        display: block;
+    }
+
+}

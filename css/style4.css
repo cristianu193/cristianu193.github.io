@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 85px;
+}
+
+#contenedor {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+
+  #categorias {
+    position: relative;
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .categoria {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+    position: relative;
+  }
+
+  .categoria:hover {
+    background-color: #45a049;
+  }
+
+  .productos-lista {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: -10px; /* Ajuste para alinear el inicio de la lista con la categoría */
+    white-space: nowrap; /* Evita el salto de línea en la lista de productos */
+  }
+
+  .producto {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+    display: block;
+    width: 150px; /* Ancho deseado de cada elemento de producto */
+  }
+
+  .producto:hover {
+    background-color: #45a049;
+  }
+
+  #imagenes {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+  }
