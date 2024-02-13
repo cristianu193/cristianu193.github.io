@@ -36,21 +36,14 @@
 </header>
 
 <div class="icono-fijo">
-  <a href="hhttps://web.whatsapp.com/" target="_blank">
-    <img src="img/icons-whatsapp.png" alt="Descripción del icono">
+  <a href="https://wa.me/573202556360?text=Me%20gustaría%20obtener%20más%20información" target="_blank">
+    <img src="img/icons-whatsapp.png" alt="whatsapp">
   </a>
 </div>
 
-<section class="body-page">
-  <section class="nosotros">
-    <div>
-      <h3>Equipos Gastronómicos J & D</h3>
-      <p>
-        Empresa Colombiana dedicada al diseño y fabricación de equipos en acero inoxidable, Contamos con el mejor equipamiento comercial en un solo lugar, ofreciendo una amplia gama de equipos fabricados para la industria gastronómica, establecimientos penitenciarios, línea Hospitalaria y Linea institucional.  fabricamos según las necesidades de nuestros clientes, tenemos gran variedad de productos en acero inoxidable.
-      </p>
-    </div>
-  </section>
 
+<section class="body-page">
+  <h2 class="titulos">NOSOTROS</h2>
   <div class="carousell-container">
     <div class="carousell">
       <div class="carousell-item">
@@ -69,13 +62,23 @@
     </div>
   </div>
 
+  <section class="nosotros">
+    <div>
+      <h2>Equipos Gastronómicos J & D</h2>
+      <p>
+        Te brindamos asesoría y acompañamiento para realizar tu negocio acompañamiento. 
+        Cada trabajo es único, cada cliente es especial, tu sabes cómo quieres que sea tu cocina y nosotros podemos ayudarte, por esto ponemos toda nuestra experiencia a tu servicio para que logres el éxito que deseas.
+      </p>
+    </div>
+  </section>
+
     <section class="blog-sec" id="blog">
       <h2 class="titulos">NUESTROS PRODUCTOS</h2>
       <div class="container">
         <div class="row">
           <div class="col-md-4 blog-box">
             <div class="blog-image-block"> 
-              <a href="Productos.html">
+              <a href="Productos.html" onclick="redir('asadores')">
                 <div class="timage">
                   ASADORES DE POLLO
                 </div>
@@ -85,7 +88,7 @@
           </div>
           <div class="col-md-4 blog-box">
             <div class="blog-image-block"> 
-              <a class="boton-general" href="Productos.html">
+              <a href="Productos.html">
                 <div class="timage">
                   SISTEMA DE EXTRACCIÓN
                 </div>
@@ -95,7 +98,7 @@
           </div>
           <div class="col-md-4 blog-box">
             <div class="blog-image-block"> 
-              <a href="Productos.html">
+              <a href="Productos.html" onclick="redir('coccion')">
                 <div class="timage">
                   COCCIÓN
                 </div>
@@ -105,7 +108,7 @@
           </div>
           <div class="col-md-4 blog-box">
             <div class="blog-image-block"> 
-              <a href="Productos.html">
+              <a href="Productos.html" onclick="redir('moviliario')">
                 <div class="timage">
                   MOVILIARIO
                 </div>
@@ -115,7 +118,7 @@
           </div>
           <div class="col-md-4 blog-box">
             <div class="blog-image-block"> 
-              <a class="boton-general" href="Productos.html">
+              <a href="Productos.html"onclick="redir('hospitalaria')">
                 <div class="timage">
                   LINEA HOSPITALARIA
                 </div>
@@ -125,7 +128,7 @@
           </div>
           <div class="col-md-4 blog-box">
             <div class="blog-image-block"> 
-              <a href="Productos.html">
+              <a href="Productos.html" onclick="redir('montajes')">
                 <div class="timage">
                   MONTAJES
                 </div>
@@ -136,7 +139,36 @@
         </div>
       </div>
     </section>
+</section>
 
+<section class="Contacto-main">
+  <h2 class="titulos">CONTACTO</h2>
+  <div class="contacto">
+    <div class="form-contacto">
+      <form id="contact-form" action="https://formsubmit.co/cristianu193@hotmail.com" target="_blank" method="POST" >
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Asunto:</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje:</label>
+          <textarea id="text" name="message" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+      <div class="ubicacion">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7953.892548490383!2d-74.16490316390988!3d4.603643588282057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9eee9d70fa67%3A0xcc7043f6579b7294!2sEquipos%20Gastronomicos%20J%26D%20Sas!5e0!3m2!1ses!2sco!4v1707592653881!5m2!1ses!2sco" style="border:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
 </section>
 
     <footer class="footer">
@@ -177,7 +209,7 @@
       <div class="copyright">
           &copy;copyright Equipos Gastronómicos J & D
       </div>
-    
+      <script src="/js/prod.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <!-- Placed at the end of the document so the pages load faster --> 
         <script src="js/jquery.min.js" ></script> 

@@ -6,6 +6,9 @@ function mostrarProductos(categoria, cantidadProductos) {
     var productosAnteriores = document.getElementById(`productos-${categoriaActual}`);
     productosAnteriores.style.display = 'none';
   }
+  else {
+    mostrarImagenes(categoria, )
+  }
 
   var productosContainer = document.getElementById(`productos-${categoria}`);
   productosContainer.innerHTML = '';
@@ -60,7 +63,7 @@ function mostrarImagenes(categoria) {
     if (scrollWidth > clientWidth) {
       carousel.scrollLeft += 1; // Desplazar el carrusel hacia la derecha
       if (carousel.scrollLeft >= scrollWidth - clientWidth) {
-        carousel.scrollLeft = 0; // Volver al principio cuando se alcanza el final
+        carousel.scrollLeft = 2; // Volver al principio cuando se alcanza el final
       }
     }
   }
@@ -92,3 +95,44 @@ function mostrarImagenes(categoria) {
 
   // Iniciar el slideshow
   mostrarSlide();
+
+  // para crear el contacto y maps 
+  
+// Initialize and add the map
+function initMap() {
+    // The location of your desired place
+    const location = { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE };
+    // The map, centered at the location
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15,
+      center: location,
+    });
+    // The marker, positioned at the location
+    const marker = new google.maps.Marker({
+      position: location,
+      map: map,
+    });
+  }
+  
+  // Form Submission
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Handle form submission here
+  });
+  
+
+//prueba 2 de productos 
+
+function mostrarImagenes(categoriaPrueba) {
+    // Oculta todas las imágenes
+    var imagenes = document.querySelectorAll('.imagen');
+    imagenes.forEach(function(imagen) {
+        imagen.style.display = 'none';
+    });
+
+    // Muestra las imágenes de la categoría seleccionada
+    var imagenesCategoria = document.querySelectorAll('.' + categoriaPrueba);
+    imagenesCategoria.forEach(function(imagenCategoria) {
+        imagenCategoria.style.display = 'block';
+    });
+}
