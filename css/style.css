@@ -489,9 +489,6 @@ h4{
     text-align: justify;
     opacity: 0;
     animation: aparecer 3s forwards;
-    top: 25%; /* Centra verticalmente */
-    transform: translateY(75%);
-
   }
 
   .carprod img {
@@ -532,11 +529,22 @@ h4{
 
 @media (max-width:1050px){
 
+    .nosotros  div {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
     .carprod img{
         max-width: 400px;
         max-height: 500px;
         margin: 0px;
         top: 10%;
+    }
+    .carprod p {
+        margin: 15px;
+        vertical-align: 50%;
+        text-align: justify;
+
     }
 
     .body-page{
