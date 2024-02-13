@@ -346,8 +346,8 @@ h4{
 
 .icono-fijo {
     position: fixed;
-    right: 20px; /* Ajusta la posición desde el lado izquierdo */
-    top: 75%; /* Centra verticalmente */
+    right: 30px; /* Ajusta la posición desde el lado izquierdo */
+    top: 80%; /* Centra verticalmente */
     transform: translateY(25%);
     z-index: 999; /* Ajusta la capa z para asegurarse de que esté encima de otros elementos */
   }
@@ -469,6 +469,11 @@ h4{
     justify-content: space-between; /* Centramos horizontalmente las imágenes */
   }
 
+  .cardprodtex {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .carprod h4 {
     font-size: 40px; /* Tamaño de fuente del título */
     text-align: center;
@@ -529,12 +534,30 @@ h4{
 
 @media (max-width:1050px){
 
+    .body-page{
+        margin-top: 55px;
+        width: 100%;
+    }
+
     .nosotros  div {
         margin-left: 5px;
         margin-right: 5px;
     }
 
+    .carprod {
+        flex-direction: column;
+    }
+    
+    .carprod h4 {
+        text-align: center;
+    }
+    .cardprodtex {
+        display: flex;
+        flex-direction: column;
+    }
+
     .carprod img{
+        justify-content: center;
         max-width: 400px;
         max-height: 500px;
         margin: 0px;
@@ -547,19 +570,6 @@ h4{
 
     }
 
-    .body-page{
-        margin-top: 55px;
-        width: 100%;
-    }
-    
-    .btncomprar {
-        top: 85%;
-    }
-
-    .carprod p {
-        top: 49%;
-    }
-
     /* media de carrousel propio*/
     .carousell-container{
         margin-top: 10px;
@@ -568,10 +578,6 @@ h4{
     /*fin carrousel propio*/
     /* media de contacto*/
     .contacto {
-        flex-direction: column;
-      }
-
-      .carprod {
         flex-direction: column;
       }
     
@@ -652,9 +658,9 @@ h4{
     }
     .icono-fijo {
         position: fixed;
-        right: 60px; /* Ajusta la posición desde el lado izquierdo */
-        top: 75%; /* Centra verticalmente */
-        transform: translateY(25%);
+        right: 50px; /* Ajusta la posición desde el lado izquierdo */
+        top: 85%; /* Centra verticalmente */
+        transform: translateY(15%);
         z-index: 999; /* Ajusta la capa z para asegurarse de que esté encima de otros elementos */
       }
       /*fin icono whatsapp*/
