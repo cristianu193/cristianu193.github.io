@@ -416,8 +416,8 @@ h4{
 
   .carousell-item img {
     width: 100%; /* Ajustar la imagen al ancho del contenedor */
-    height: 100%;  /*  Ajustar la imagen a la altura máxima */
-    /* margin: 20px; /* Centramos verticalmente la imagen */
+    max-height: 500px;  /*  Ajustar la imagen a la altura máxima */
+    margin: 20px; /* Centramos verticalmente la imagen */
     display: block;
   }
 
@@ -430,6 +430,7 @@ h4{
     display: flex;
     justify-content: center;
     text-align: justify;
+    align-items: center;
   }
 /*Fin carrusel propio inicio*/
 
@@ -568,7 +569,7 @@ h4{
         flex-direction: column;
     }
 
-    .carprodtext img{
+    .carprod img{
         justify-content: center;
         max-width: 400px;
         max-height: 500px;
@@ -696,6 +697,7 @@ h4{
     }
     .icono-fijo {
         position: fixed;
+        max-width: 70px;
         right: 50px; /* Ajusta la posición desde el lado izquierdo */
         top: 85%; /* Centra verticalmente */
         transform: translateY(15%);
