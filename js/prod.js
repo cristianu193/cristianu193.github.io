@@ -136,3 +136,48 @@ function mostrarImagenes(categoriaPrueba) {
         imagenCategoria.style.display = 'block';
     });
 }
+
+// carrosel del index con botones
+function nextSlide() {
+  const carousell = document.querySelector('.carousell'); // Selecciona el elemento con la clase 'carousell'
+  const currentScroll = carousell.scrollLeft; // Obtiene la posición de desplazamiento horizontal actual del carrusel
+  const itemWidth = carousell.querySelector('.carousell-item').offsetWidth; // Obtiene el ancho del primer elemento del carrusel
+  carousell.scrollTo({ // Desplaza el carrusel horizontalmente
+    left: currentScroll + itemWidth, // Desplaza a la derecha sumando el ancho del elemento
+    behavior: 'smooth' // Añade un desplazamiento suave
+  });
+}
+
+function prevSlide() {
+  const carousell = document.querySelector('.carousell'); // Selecciona el elemento con la clase 'carousell'
+  const currentScroll = carousell.scrollLeft; // Obtiene la posición de desplazamiento horizontal actual del carrusel
+  const itemWidth = carousell.querySelector('.carousell-item').offsetWidth; // Obtiene el ancho del primer elemento del carrusel
+  carousell.scrollTo({ // Desplaza el carrusel horizontalmente
+    left: currentScroll - itemWidth, // Desplaza a la izquierda restando el ancho del elemento
+    behavior: 'smooth' // Añade un desplazamiento suave
+  });
+}
+//fin carrusel index
+
+
+// carrosel del index con botones
+function nextSlideP() {
+  const carrouselprod = document.querySelector('.carrouselprod'); // Selecciona el elemento con la clase 'carousell'
+  const currentScrollP = carrouselprod.scrollLeft; // Obtiene la posición de desplazamiento horizontal actual del carrusel
+  const itemWidthP = carrouselprod.querySelector('.carprod').offsetWidth; // Obtiene el ancho del primer elemento del carrusel
+  carrouselprod.scrollTo({ // Desplaza el carrusel horizontalmente
+    left: currentScrollP + itemWidthP, // Desplaza a la derecha sumando el ancho del elemento
+    behavior: 'smooth' // Añade un desplazamiento suave
+  });
+}
+
+function prevSlideP() {
+  const carrouselprod = document.querySelector('.carrouselprod'); // Selecciona el elemento con la clase 'carousell'
+  const currentScrollP = carrouselprod.scrollLeft; // Obtiene la posición de desplazamiento horizontal actual del carrusel
+  const itemWidthP = carrouselprod.querySelector('.carprod').offsetWidth; // Obtiene el ancho del primer elemento del carrusel
+  carrouselprodP.scrollTo({ // Desplaza el carrusel horizontalmente
+    left: currentScroll - itemWidthP, // Desplaza a la izquierda restando el ancho del elemento
+    behavior: 'smooth' // Añade un desplazamiento suave
+  });
+}
+//fin carrusel index

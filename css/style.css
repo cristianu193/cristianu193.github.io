@@ -9,29 +9,70 @@ body{
     font-family: 'Nunito', sans-serif;
     min-height: 100vh;
     box-sizing: border-box;
-    padding-top: 85px;
+    /*padding-top: 85px;*/
 }
 .body-page{
     font-family: 'Nunito', sans-serif;
     margin-top: 30px;
 }
 .header{ 
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     left: 0;
     right: 0;    
     background-color: white;
-    padding: 8px 10%;
+    /*padding: 0px 10%;
+    /*display: flex;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    z-index: 1000;
+    border-bottom: 0px solid rgb(55, 88, 149);
+}
+
+.line {
+    position: fixed;
+    margin-top: 0px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    border-bottom: 5px solid rgb(55, 88, 149);
+    justify-content: center;
+    background-color: rgb(55, 88, 149);
+    z-index: 999;
+}
+
+.line ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.line img{
+    width: 37px;
+    height: 37px;
+}
+
+.line ul li{
+    float: left;
+    position: relative;
+    line-height: 2.8;
+    list-style: none;
+    padding: 0px 10px;
+    margin: 0px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header .logo {
+    height: 110px;
+    display: flex;
+    justify-content: right;
+    margin-right: 35px;
+    text-align: center;
 }
 
 .header .logo img{
+    margin-top: 57px;
     height: 80px;
-
     line-height: auto;
     transition: all 0.3s;
 }
@@ -40,31 +81,41 @@ body{
     transform: scale(1.2);
 }
 
-.header .nav-links{
+.nav-links{
+    position: relative;
+    margin-top: 37px;
     display: flex;
     justify-content: space-between;
+    justify-content: center;
+    background-color: rgb(113, 112, 110);
+    /*z-index: 9999;*/
 }
 .nav-links ul {
     list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 .header .nav-links ul li{
     float: left;
     position: relative;
     line-height: 2.8;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
 }
 
 .header .nav-links ul li a{
     font-size: 18px;
-    color: rgb(55, 88, 149);
+    color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 0px 40px;
     display: block;
     transition: all .2s ease;
+
 }
 .header .nav-links ul li a:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgba(55, 88, 149, 0.7);
+    color: white;
+    background-color: rgb(54, 52, 47);
     border-radius: 10px;
 }
 
@@ -96,22 +147,6 @@ body{
     display: initial;
 }
 
-.header .btn button{
-    font-weight: 700;
-    color: #1b3039;
-    padding: 9px 25px;
-    background: #eceff1;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-.header .btn button:hover{
-    background-color: #003797;
-    color: #ffffff;
-    transform: scale(1.1);
-}
 
 #toggle,
 .header label{
@@ -127,6 +162,141 @@ body{
 .blog-sec{
     margin: 10px;
 }
+
+
+/*carrusel propio inicio*/
+.carrusel-index{
+    display: flex;
+    justify-content: center;
+}
+
+.carousell-container{
+    /*position: relative;*/
+    background-color: rgba(231, 228, 228, 0.76);
+    width: 95%;
+    height: 600px;
+    /*margin: 50px auto;*/
+    overflow: hidden;
+    border-bottom: 4px solid rgb(45, 88, 179);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(53, 44, 44, 0.9);
+  }
+
+  .carousell {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Para suavizar el desplazamiento en dispositivos iOS */
+    height: 600px;
+  }
+
+  .carousell-item {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%; /* Ajustar al ancho de cada elemento del carrusel */
+    min-width: 200px; /* Ancho mínimo de cada elemento */
+    height: 100%;
+    opacity: 0;
+    animation: aparecer 3s forwards;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content{
+    width: 50%; /* Establece el ancho del contenido */
+    padding: 20px;
+    height: 100%;
+  }
+.content p {
+    background-color: rgba(231, 228, 228, 0.76);
+    color: black;
+    font-size: 23px;
+    text-align: justify;
+    top: 50%;
+    transform: translateY(50%);
+}
+  
+    
+.next-button,
+.prev-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.next-button img {
+    border-radius: 100%;
+    background-color: white;
+    height: 48px;
+    width: 48px;
+}
+.prev-button img{
+    border-radius: 50%;
+    background-color: white;
+    height: 48px;
+    width: 48px;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.prev-button:hover,
+.next-button:hover{
+    background-color: gray;
+    border-radius:  36px;
+}
+
+/*Fin carrusel propio inicio*/
+
+/*Imagen final index*/
+
+.final{
+    display: flex;
+    justify-content: center;
+}
+
+.index-final{
+    height: 600px;
+    width: 95%;
+    border-bottom: 4px solid rgb(45, 88, 179);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(53, 44, 44, 0.9);
+}
+
+.index-final-img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.content-final{
+    width: 50%; /* Establece el ancho del contenido */
+    padding: 20px;
+    height: 100%;
+}
+
+.content-final p {
+    background-color: rgba(231, 228, 228, 0.76);
+    color: black;
+    font-size: 23px;
+    text-align: justify;
+    top: 50%;
+    transform: translateY(50%);
+}
+/*Imagen final index final*/
+
 
 .nosotros {
     margin-top: 22px;
@@ -173,6 +343,10 @@ body{
     justify-content: center;
     text-align: center;
 }
+.col-md-4{
+    width: 200px;
+    height: 200px;
+}
 
 .blog-image-block{
     position: relative;
@@ -193,9 +367,11 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     text-decoration: none;
-    font-size: 35px;
+    font-size: 20px;
     color: white;
 }
+
+
 
 .footer{
     background-color: #000000;
@@ -241,7 +417,7 @@ body{
     transform: scale(1.2);
 }
 
-/*codigo para el contacto del index*/
+/*codigo para el contacto*/
 .contacto {
     display: flex;
     height: 100%;
@@ -280,27 +456,12 @@ body{
     margin-bottom: 16px;
   }
   
-  button {
-    background-color: rgb(45, 88, 148);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: rgb(45, 88, 179);
-  }
 
-/* fin condigo contacto index */
+/* fin condigo contacto */
 
 .img-fluid{
     border-radius: 50%;
 }
-
-
-
 
 
 h4{
@@ -311,10 +472,11 @@ h4{
 .icono-fijo {
     position: fixed;
     right: 30px; /* Ajusta la posición desde el lado izquierdo */
-    top: 80%; /* Centra verticalmente */
-    transform: translateY(25%);
+    top: 85%; /* Centra verticalmente */
+    transform: translateY(15%);
     z-index: 999; /* Ajusta la capa z para asegurarse de que esté encima de otros elementos */
   }
+
 
 
 /* Diseño de productos */
@@ -382,57 +544,6 @@ h4{
     margin: 5px;
   }
 /* fin de contenido para los productos*/
-
-/*carrusel propio inicio*/
-.carousell-container{
-    background-color: rgba(231, 228, 228, 0.76);
-    width: 100%;
-    height: 100%;
-    /*margin: 50px auto;*/
-    overflow: hidden;
-    border-bottom: 4px solid rgb(45, 88, 179);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(53, 44, 44, 0.9);
-  }
-
-  .carousell {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Para suavizar el desplazamiento en dispositivos iOS */
-  }
-
-  .carousell-item {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: 100%; /* Ajustar al ancho de cada elemento del carrusel */
-    min-width: 200px; /* Ancho mínimo de cada elemento */
-    /*margin-right: 40px;  Espacio entre elementos */
-    display: flex; /* Agregamos esta propiedad */
-    justify-content: center; /* Centramos horizontalmente las imágenes */
-    opacity: 0;
-    animation: aparecer 3s forwards;
-  }
-
-  .carousell-item img {
-    width: 100%; /* Ajustar la imagen al ancho del contenedor */
-    max-height: 500px;  /*  Ajustar la imagen a la altura máxima */
-    margin: 20px; /* Centramos verticalmente la imagen */
-    display: block;
-  }
-
-  .carousell-item p {
-    width: 100%;   
-    margin: 20px;
-    background-color: rgba(231, 228, 228, 0.76);
-    color: black;
-    font-size: 23px;
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-    align-items: center;
-  }
-/*Fin carrusel propio inicio*/
 
 /*Carrousel productos*/
 
@@ -543,8 +654,11 @@ h4{
 
 
 
-@media (max-width:1050px){
+@media (max-width:950px){
 
+    .line {
+        width: 100%;
+    }
     .body-page{
         margin-top: 55px;
         width: 100%;
@@ -596,16 +710,8 @@ h4{
 
     .carousell-item {
         flex-direction: column;
-        margin: 10px;
         max-width: fit-content;
     }
-
-    .carousell-item img {
-        width: 100%; /* Ajustar la imagen al ancho del contenedor */
-        height: 100%; /* Ajustar la imagen a la altura máxima */
-        margin: 5px; /* Centramos verticalmente la imagen */
-        margin: 20px;
-      }
 
     .carousell-item p {
         margin: 10px;
