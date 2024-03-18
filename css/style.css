@@ -659,6 +659,11 @@ h4{
     .line {
         width: 100%;
     }
+    .line ul li {
+        font-size: 14px;
+        padding: 0px;
+    }
+
     .body-page{
         margin-top: 55px;
         width: 100%;
@@ -721,6 +726,26 @@ h4{
 
     
     /*fin carrousel propio*/
+
+        /* Imagen index abajo*/
+        .final{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .index-final{
+            flex-direction: column;
+            max-width: fit-content;
+        }
+    
+        .content-final p {
+            margin: 10px;
+            max-width: 100%;
+            font-size: 15px;
+        }
+    
+        
+        /*fin carrousel propio*/
     /* media de contacto*/
     .contacto {
         flex-direction: column;
@@ -752,7 +777,11 @@ h4{
     }
 
     .header{
-        padding:  20px 10%;
+        padding:  0px ;
+    }
+
+    .logo{
+
     }
 
     .header .nav-links {
