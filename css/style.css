@@ -16,7 +16,7 @@ body{
     margin-top: 30px;
 }
 .header{ 
-    /*position: fixed;*/
+    position: relative;
     top: 0;
     left: 0;
     right: 0;    
@@ -62,6 +62,10 @@ body{
     text-decoration: none;
 }
 
+.line a{
+    text-decoration: none;
+}
+
 .header .logo {
     height: 110px;
     display: flex;
@@ -100,8 +104,8 @@ body{
     float: left;
     position: relative;
     line-height: 2.8;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+    /*border-left: 2px solid white;
+    border-right: 2px solid white;*/
 }
 
 .header .nav-links ul li a{
@@ -122,7 +126,7 @@ body{
 .header .nav-links ul li ul {
     position: absolute;
     width: 250px;
-    background-color: white;
+    background-color: rgb(113, 112, 110);
     display: none;
     border-radius: 20px ;
 }
@@ -130,7 +134,7 @@ body{
 .header .nav-links ul li ul li a{
     font-size: 18px;
     text-transform: capitalize;
-    color: rgb(55, 88, 149);
+    color: white;
 }
 
 .header .nav-links ul li ul li ul { 
@@ -718,8 +722,12 @@ h4{
         max-width: fit-content;
     }
 
-    .carousell-item p {
-        margin: 10px;
+    .content {
+        width: 100%;
+    }
+
+    .content p {
+        margin: 0px;
         max-width: 100%;
         font-size: 15px;
     }
@@ -727,25 +735,30 @@ h4{
     
     /*fin carrousel propio*/
 
-        /* Imagen index abajo*/
-        .final{
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
+    /* Imagen index abajo*/
+    .final{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .index-final{
+        flex-direction: column;
+        max-width: fit-content;
+    }
+    .content-final{
+        width: 100%; /* Establece el ancho del contenido */
+        padding: 20px;
+        height: 100%;
+    }
+
+    .content-final p {
+        margin: 0px;
+        max-width: 100%;
+        font-size: 15px;
+    }
+
     
-        .index-final{
-            flex-direction: column;
-            max-width: fit-content;
-        }
-    
-        .content-final p {
-            margin: 10px;
-            max-width: 100%;
-            font-size: 15px;
-        }
-    
-        
-        /*fin carrousel propio*/
+    /*fin index propio*/
     /* media de contacto*/
     .contacto {
         flex-direction: column;
@@ -780,16 +793,12 @@ h4{
         padding:  0px ;
     }
 
-    .logo{
-
-    }
-
     .header .nav-links {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: white;
+        background-color: rgb(113, 112, 110);;
         display: none;
     }
 
@@ -808,7 +817,7 @@ h4{
     }
 
     .header .nav-links ul li ul li {
-        background-color: rgba(88, 123, 185, 0.7);
+        background-color: rgb(113, 112, 110);;
     }
 
     .header .nav-links ul li ul li ul {
